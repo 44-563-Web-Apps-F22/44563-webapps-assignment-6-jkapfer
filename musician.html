@@ -25,7 +25,9 @@
 let correct = 0
 let wrong = 0
 
-function checkGuess (){
+
+function checkGuess ()
+{
     console.log("Getting form values")
     musician = document.getElementById("form1_musician").value
     guess = document.getElementById("form1_guess").value
@@ -42,7 +44,18 @@ function checkGuess (){
     out = document.getElementById("result")
     out.innerHTML = "correct = " + correct + " wrong = " + wrong
 }
+//creating global variable for setting image
+var useImage = 1
+
+function swapImage()
+{
+    
+}
 </script>
+
+<div>
+    <img src="resources/images/kamehameha-butterfly.jpeg" width="100" height="100" class ="img-fluid" alt="Kamehameha Butterfly" onclick="swapImage()">
+</div>
 
 </body>
 </html> 
