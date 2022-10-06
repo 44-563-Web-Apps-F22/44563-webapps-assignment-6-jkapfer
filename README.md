@@ -7,4 +7,4 @@ https://44-563-web-apps-f22.github.io/44563-webapps-assignment-6-jkapfer/musicia
 
 https://44-563-web-apps-f22.github.io/44563-webapps-assignment-6-jkapfer/discount.html
 
-https://44-563-web-apps-f22.github.io/44563-webapps-assignment-6-jkapfer/vaction.html
+https://44-563-web-apps-f22.github.io/44563-webapps-assignment-6-jkapfer/vacation.html
