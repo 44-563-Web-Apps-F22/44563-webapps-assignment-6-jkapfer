@@ -23,7 +23,17 @@
     <input type="button" onclick="selectVacation()" value="Select a vacation">
   </form>
 
-<p id="result">This text will be replaced </p>
+<p id="vacation"></p>
+
+<form>
+    <label for="form1_city">Enter a city</label>
+    <input type ="text" id="form1_city" name="form1_city" value="city"> <br>
+
+    <label for="form1_price">Enter price</label>
+    <input type ="text" id="form1_price" name="form1_price"> <br>
+
+    <input type="button" onclick="updateVacation()" value="Update the vacation">
+</form>
 
 <script> 
     var my_vacation = {}
@@ -60,8 +70,20 @@
         {
             my_vacation['resort'] = false
         } 
-        out = document.getElementById("result")
+        out = document.getElementById("vacation")
         out.innerHTML = JSON.stringify(my_vacation)
+    }
+
+    function updateVacation()
+    {
+        city = document.getElementById("form1_city").value
+        price = document.getElementById("form1_price").value
+
+        my_vacation['city'] = city
+        my_vacation['price'] = price
+        out = document.getElementById("vacation")
+        out.innerHTML = JSON.stringify(my_vacation)
+
     }
 </script>
 
