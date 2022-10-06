@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vacation</title>
+</head> 
+<body>
+
+<h2>Jacob Kapfer selects a vacation</h2>
+
+<form>
+    <input type="checkbox" id="cb1_air" name="air"   
+      value="true" checked>
+    <label for="cb1_air">Travel by Air</label></br>
+  
+    <input type="checkbox" id="cb1_domestic" name="domestic" 
+       value="true" checked>
+    <label for="cb1_domestic">Domestic</label></br>
+  
+    <input type="checkbox" id="cb1_resort" name="resort"   
+       value="false">
+    <label for="cb1_resort">Resort</label></br>
+
+    <input type="button" onclick="selectVacation()" value="Select a vacation">
+  </form>
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+    var my_vacation = {}
+    function selectVacation() 
+    {
+        console.log("Getting input")
+        air = document.getElementById("cb1_air").checked
+        domestic = document.getElementById("cb1_domestic").checked
+        resort = document.getElementById("cb1_resort").checked
+        my_vacation = {}
+        if(air)
+        {
+            my_vacation['air'] = true
+        }
+        else
+        {
+            my_vacation['air'] = false
+        }
+    
+        if(domestic)
+        {
+            my_vacation['domestic'] = true
+        }
+        else
+        {
+            my_vacation['domestic'] = false
+        } 
+   
+        if(resort)
+        {
+            my_vacation['resort'] = true
+        }
+        else
+        {
+            my_vacation['resort'] = false
+        } 
+        out = document.getElementById("result")
+        out.innerHTML = JSON.stringify(my_vacation)
+    }
+</script>
+
+</body>
+</html> 
